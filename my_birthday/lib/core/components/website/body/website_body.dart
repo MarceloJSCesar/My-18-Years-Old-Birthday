@@ -29,6 +29,18 @@ class _WebsiteBodyState extends State<WebsiteBody> {
                 children: CardImageModel().cards,
               ),
             ),
+            SizedBox(height: 20),
+            Text(
+              'About',
+              style: AppTextStyles.websiteTitleTextStyle,
+            ),
+            Container(
+              margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+              child: Text(
+                'So, I made this website yesterday, I decided to take one day to challenge myself build this website, where people who wants to send me gift or support me, it would be good , because I\'m working on my big project ideia , by my own yet, but in future you will see this project getting released. My big challenge is build what they say being impossible. Thanks for reading. GOD WITH ALL OF US',
+                style: AppTextStyles.headerTitleTextStyle,
+              ),
+            ),
           ],
         ),
       ),
