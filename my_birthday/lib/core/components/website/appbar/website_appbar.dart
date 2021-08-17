@@ -8,12 +8,16 @@ class WebsiteAppBar extends PreferredSize {
   final List<String> names;
   WebsiteAppBar({@required this.context, @required this.names})
       : super(
-          preferredSize: Size.fromHeight(420),
+          preferredSize: Size.fromHeight(370),
           child: SafeArea(
             child: Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
               decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30),
+                  bottomRight: Radius.circular(30),
+                ),
                 image: DecorationImage(
                   fit: BoxFit.fill,
                   image: AssetImage(
@@ -22,6 +26,8 @@ class WebsiteAppBar extends PreferredSize {
                 ),
               ),
               child: Container(
+                margin:
+                    const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                 child: TyperAnimatedTextKit(
                   text: names,
                   textStyle: AppTextStyles.headerTitleTextStyle,
