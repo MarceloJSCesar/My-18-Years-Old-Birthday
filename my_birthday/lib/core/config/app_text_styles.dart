@@ -6,9 +6,28 @@ class AppTextStyles {
     fontSize: 20,
     color: Colors.white,
   );
-  static final TextStyle titleTextStyle = GoogleFonts.poppins(
-    fontSize: 24,
+  // website
+  static final TextStyle websiteTitleTextStyle = GoogleFonts.poppins(
+    fontSize: 22,
     color: Colors.white,
     fontWeight: FontWeight.w300,
+  );
+  static final TextStyle websiteTextStyle = GoogleFonts.poppins(
+    fontSize: 20,
+    color: Colors.grey,
+  );
+  static final TextStyle websiteCardTextStyle = GoogleFonts.poppins(
+    fontSize: 18,
+    color: Colors.grey,
+  );
+  // mobile
+  static final TextStyle mobileTitleTextStyle = GoogleFonts.poppins(
+    fontSize: 19,
+    color: Colors.white,
+    fontWeight: FontWeight.w300,
+  );
+  static final TextStyle mobileTextStyle = GoogleFonts.adventPro(
+    fontSize: 20,
+    color: Colors.grey,
   );
 }

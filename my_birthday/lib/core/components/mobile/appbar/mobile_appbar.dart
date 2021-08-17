@@ -8,7 +8,7 @@ class MobileAppBar extends PreferredSize {
   final List<String> names;
   MobileAppBar({@required this.context, @required this.names})
       : super(
-          preferredSize: Size.fromHeight(180),
+          preferredSize: Size.fromHeight(200),
           child: SafeArea(
             child: Container(
               width: MediaQuery.of(context).size.width,

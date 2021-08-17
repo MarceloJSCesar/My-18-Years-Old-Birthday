@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import '../../../config/app_text_styles.dart';
 import '../../../models/card_image_model.dart';
+import '../../../services/browser_services.dart';
 
-class MobileBody extends StatefulWidget {
+class WebsiteBody extends StatefulWidget {
   @override
-  _MobileBodyState createState() => _MobileBodyState();
+  _WebsiteBodyState createState() => _WebsiteBodyState();
 }
 
-class _MobileBodyState extends State<MobileBody> {
+class _WebsiteBodyState extends State<WebsiteBody> {
+  final browserServices = BrowserServices();
   @override
   SafeArea build(BuildContext context) {
     return SafeArea(
@@ -18,11 +20,11 @@ class _MobileBodyState extends State<MobileBody> {
           children: <Widget>[
             Text(
               'Dreams',
-              style: AppTextStyles.mobileTitleTextStyle,
+              style: AppTextStyles.websiteTitleTextStyle,
             ),
             SizedBox(height: 20),
             Container(
-              height: 100,
+              height: 200,
               width: MediaQuery.of(context).size.width,
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -38,13 +40,36 @@ class _MobileBodyState extends State<MobileBody> {
               margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
               child: Text(
                 'So, I made this website yesterday, I decided to take one day to challenge myself build this website, where people who wants to send me gift or support me, it would be good , because I\'m working on my big project ideia , by my own yet, but in future you will see this project getting released. My big challenge is build what they say being impossible. Thanks for reading. GOD WITH ALL OF US',
-                style: AppTextStyles.mobileTextStyle,
+                style: AppTextStyles.websiteTextStyle,
               ),
             ),
             SizedBox(height: 20),
             Text(
               'Support',
-              style: AppTextStyles.mobileTitleTextStyle,
+              style: AppTextStyles.websiteTitleTextStyle,
+            ),
+            SizedBox(height: 15),
+            GestureDetector(
+              onTap: () => browserServices.openLink(''),
+              child: Container(
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                child: Text.rich(
+                  TextSpan(
+                    text: 'There\'s a mobile apk ',
+                    style: AppTextStyles.websiteTextStyle,
+                    children: [
+                      TextSpan(
+                        text: 'Download Here',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
             ),
             SizedBox(height: 8),
             Container(
