@@ -8,7 +8,7 @@ class WebsiteAppBar extends PreferredSize {
   final List<String> names;
   WebsiteAppBar({@required this.context, @required this.names})
       : super(
-          preferredSize: Size.fromHeight(370),
+          preferredSize: Size.fromHeight(390),
           child: SafeArea(
             child: Container(
               width: MediaQuery.of(context).size.width,

@@ -6,8 +6,15 @@ class AppTextStyles {
     fontSize: 20,
     color: Colors.white,
   );
-  static final TextStyle titleTextStyle = GoogleFonts.poppins(
-    fontSize: 24,
+  // website
+  static final TextStyle websiteTitleTextStyle = GoogleFonts.poppins(
+    fontSize: 22,
+    color: Colors.white,
+    fontWeight: FontWeight.w300,
+  );
+  // mobile
+  static final TextStyle mobileTitleTextStyle = GoogleFonts.poppins(
+    fontSize: 19,
     color: Colors.white,
     fontWeight: FontWeight.w300,
   );
