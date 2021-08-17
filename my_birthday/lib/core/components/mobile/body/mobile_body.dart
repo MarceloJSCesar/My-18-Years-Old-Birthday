@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_birthday/core/services/payment_service.dart';
 import '../../../config/app_text_styles.dart';
 import '../../../models/card_image_model.dart';
 
@@ -9,7 +8,6 @@ class MobileBody extends StatefulWidget {
 }
 
 class _MobileBodyState extends State<MobileBody> {
-  final _payment = PaymentService();
   @override
   SafeArea build(BuildContext context) {
     return SafeArea(
@@ -48,10 +46,111 @@ class _MobileBodyState extends State<MobileBody> {
               'Support',
               style: AppTextStyles.mobileTitleTextStyle,
             ),
-            ElevatedButton(
-              onPressed: () => _payment.payment('10.00'),
-              child: Text('Support me'),
-            )
+            SizedBox(height: 8),
+            Container(
+              margin: const EdgeInsets.symmetric(horizontal: 15),
+              child: Text(
+                'Payment Information',
+                style: AppTextStyles.websiteTextStyle,
+              ),
+            ),
+            SizedBox(height: 8),
+            Card(
+              color: Colors.black,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      'Via Bank',
+                      style: AppTextStyles.websiteTitleTextStyle,
+                    ),
+                    Container(
+                      margin: const EdgeInsets.symmetric(
+                        vertical: 8,
+                        horizontal: 10,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            'Nib: 000810010001640700106',
+                            style: AppTextStyles.websiteCardTextStyle,
+                          ),
+                          Text(
+                            'Account Name: Nidia Pina Barros',
+                            style: AppTextStyles.websiteCardTextStyle,
+                          ),
+                          Text(
+                            'BAI Bank',
+                            style: AppTextStyles.websiteCardTextStyle,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      'Via Paypal',
+                      style: AppTextStyles.websiteTitleTextStyle,
+                    ),
+                    Container(
+                      margin: const EdgeInsets.symmetric(
+                        vertical: 8,
+                        horizontal: 10,
+                      ),
+                      child: Text(
+                        'email: jsdevmarcelo@gmail.com',
+                        style: AppTextStyles.websiteCardTextStyle,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      'Via MoneyGram',
+                      style: AppTextStyles.websiteTitleTextStyle,
+                    ),
+                    Container(
+                      margin: const EdgeInsets.symmetric(
+                        vertical: 8,
+                        horizontal: 10,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            'Name: Marcelo Cesar',
+                            style: AppTextStyles.websiteCardTextStyle,
+                          ),
+                          Text(
+                            'Age: 18years old',
+                            style: AppTextStyles.websiteCardTextStyle,
+                          ),
+                          Text(
+                            'E-mail: jsdevmarcelo@gmail.com',
+                            style: AppTextStyles.websiteCardTextStyle,
+                          ),
+                          Text(
+                            'Address: ASA, Praia, Achada Santo Antonio',
+                            style: AppTextStyles.websiteCardTextStyle,
+                          ),
+                          Text(
+                            'Postal code: 7602',
+                            style: AppTextStyles.websiteCardTextStyle,
+                          ),
+                          Text(
+                            'Phone number: +238 9561414',
+                            style: AppTextStyles.websiteCardTextStyle,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),

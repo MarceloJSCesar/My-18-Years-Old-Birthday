@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_birthday/core/services/browser_services.dart';
-import 'package:my_birthday/core/services/payment_service.dart';
 import '../../../config/app_text_styles.dart';
 import '../../../models/card_image_model.dart';
+import '../../../services/browser_services.dart';
 
 class WebsiteBody extends StatefulWidget {
   @override

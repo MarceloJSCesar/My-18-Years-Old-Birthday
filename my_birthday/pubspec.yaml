@@ -26,7 +26,6 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^2.1.0
-  flutter_braintree: ^2.0.0+1
   url_launcher: ^6.0.3
 #  cupertino
 #  google
