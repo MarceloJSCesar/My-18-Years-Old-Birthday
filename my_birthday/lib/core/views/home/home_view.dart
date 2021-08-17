@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import '../../models/name_model.dart';
+import '../../config/app_images_name.dart';
+import '../../config/app_text_styles.dart';
+import '../../components/mobile/appbar/mobile_appbar.dart';
+import '../../components/website/appbar/website_appbar.dart';
 
 class HomeView extends StatefulWidget {
   @override
@@ -8,25 +12,22 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  final listOfNames = NameModel();
+  Orientation get orientation => MediaQuery.of(context).orientation;
+  List<String> get names => NameModel().names;
   @override
   Scaffold build(BuildContext context) {
     return Scaffold(
+      appBar: orientation == Orientation.portrait
+          ? MobileAppBar(
+              context: context,
+              names: names,
+            )
+          : WebsiteAppBar(
+              context: context,
+              names: names,
+            ),
       body: SafeArea(
-        child: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              TyperAnimatedTextKit(
-                text: listOfNames.names,
-                textStyle: TextStyle(color: Colors.white),
-                speed: Duration(milliseconds: 100),
-              ),
-            ],
-          ),
-        ),
+        child: Container(),
       ),
     );
   }
