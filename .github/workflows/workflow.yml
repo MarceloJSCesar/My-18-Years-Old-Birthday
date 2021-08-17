@@ -13,7 +13,7 @@ runs-on: ubuntu-latest
       with:
         flutter-version: '1.12.x' # you can use 1.12
         channel: 'beta' # Currently you have to use beta channel for Flutter web.
-    - name: Upgrades flutter
+    - name: my_birthday
       run: flutter upgrade
       working-directory: ./example
     - name: Enable Web
@@ -22,7 +22,7 @@ runs-on: ubuntu-latest
     - name: Install dependencies
       run: flutter packages get
       working-directory: ./example
-    - name: Build Web
+    - name: my_birthday
       run: flutter build web
       working-directory: ./example
     - name: Deploy
@@ -32,7 +32,7 @@ runs-on: ubuntu-latest
         git config user.name  "MarceloJSCesar"
         git config user.email "jsdevmarcelo@gmail.com"
         git remote add secure-origin https://${{ secrets.ACCESS_TOKEN }}@github.com/[MarceloJSCesar]/[My-18-Years-Old-Birthday].git
-        git checkout -b gh-pages
+        git checkout -b development
         git add .
         git commit -m "Updated docs"
         git push --force secure-origin gh-pages
