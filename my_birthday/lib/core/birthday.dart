@@ -7,6 +7,9 @@ class Birthday extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomeView(),
+      theme: ThemeData(
+        brightness: Brightness.dark,
+      ),
     );
   }
 }
