@@ -26,9 +26,11 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^2.1.0
-  intl: ^0.17.0
-  square_in_app_payments: ^1.4.0
-
+  flutter_braintree: ^2.0.0+1
+  url_launcher: ^6.0.3
+#  cupertino
+#  google
+# ^1.4.0 aquare
 dev_dependencies:
   flutter_test:
     sdk: flutter

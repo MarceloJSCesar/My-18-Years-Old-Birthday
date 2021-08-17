@@ -13,7 +13,7 @@ class CardImage extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: Image(
-          image: NetworkImage(imagePath),
+          image: AssetImage(imagePath),
         ),
       ),
     );
