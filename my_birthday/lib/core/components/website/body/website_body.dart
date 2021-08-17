@@ -56,7 +56,7 @@ class _WebsiteBodyState extends State<WebsiteBody> {
                     const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
                 child: Text.rich(
                   TextSpan(
-                    text: 'Try send me money on mobile: ',
+                    text: 'There\'s a mobile apk ',
                     style: AppTextStyles.websiteTextStyle,
                     children: [
                       TextSpan(
