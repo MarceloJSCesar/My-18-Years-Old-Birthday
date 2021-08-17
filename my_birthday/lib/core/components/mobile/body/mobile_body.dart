@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../config/app_text_styles.dart';
+import '../../../models/website/card_image_model.dart';
 
 class MobileBody extends StatefulWidget {
   @override
@@ -20,16 +21,24 @@ class _MobileBodyState extends State<MobileBody> {
               style: AppTextStyles.mobileTitleTextStyle,
             ),
             SizedBox(height: 20),
-            Card(
-              color: Colors.black,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18)),
-              child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: Image(
-                  image: NetworkImage(
-                      'https://1000logos.net/wp-content/uploads/2017/02/Harvard-Logo-Meaning-history.jpg'),
-                ),
+            Container(
+              height: 180,
+              width: MediaQuery.of(context).size.width,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: CardImageModel().cards,
+              ),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'About',
+              style: AppTextStyles.websiteTitleTextStyle,
+            ),
+            Container(
+              margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+              child: Text(
+                'So, I made this website yesterday, I decided to take one day to challenge myself build this website, where people who wants to send me gift or support me, it would be good , because I\'m working on my big project ideia , by my own yet, but in future you will see this project getting released. My big challenge is build what they say being impossible. Thanks for reading. GOD WITH ALL OF US',
+                style: AppTextStyles.headerTitleTextStyle,
               ),
             ),
           ],
